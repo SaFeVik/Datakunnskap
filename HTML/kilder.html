@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilder</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/kilder.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">Datakunnskap</a>
+            <i class="fa-solid fa-bars bur"></i>
+        </div>
+        <div class="nav">
+            <a href="./Komponenter/komponenter.html">Datakomponenter</a>
+            <a href="lyd-bilde.html">Lydbilde</a>
+            <a href="tallsystem.html">Tallsystem</a>
+            <a href="kilder.html" class="aktiv">Kilder</a>
+        </div> 
+    </div>
+    <main>
+        <section>
+            <article>
+                <h1>Her er kildene til bilder vi brukte:</h1>
+                <a href="https://prisguiden.no/produkt/nvidia-geforce-rtx-3080-457497">Grafikkort</a>
+                <a href="https://www.tradeinn.com/techinn/no/intel-prosessor-core-i9-9900kf-3.6ghz/137434570/p">Prosessor</a>
+                <a href=""></a>
+                <a href="https://www.pngall.com/ram-png/download/48348">Arbeidsminne</a>
+                <a href="https://www.pngall.com/ssd-solid-state-drive-png">Lagring</a>
+                <a href="https://freepngimg.com/png/14176-motherboard-png-image">Hovedkort</a>
+
+                <a href="https://www.gamer.no/artikler/dette-er-eit-monster/515483">RTX 4090</a>
+                <a href="https://appuals.com/i9-13900/">i9-13900K</a>
+                <a href="https://www.forbes.com/sites/forbes-personal-shopper/2021/05/19/best-ram/">RAM</a>
+                <a href="https://www.techradar.com/news/computing-components/motherboards/best-motherboard-14-reviewed-and-rated-904229">Motherboard</a>
+                <a href="https://shopdelta.eu/hdd-for-dvr-hdd-wd100purz-10tb-247-western-digital_l2_p11120.html">HDD</a>
+                <a href="https://www.proshop.no/SSD/Samsung-980-SSD-PCIe-30-NVMe-M2-1TB/2927291">SSD</a>
+            </article>
+            <article>
+                <h1>Her er kildene til informasjonen vi hentet:</h1>
+                <a href="https://snl.no/grafikkort">SNL-grafikkort</a>
+                <a href="https://snl.no/CPU">SNL-prosessor</a>
+                <a href="https://snl.no/arbeidsminne_-_IT">SNL-arbeidsminne</a>
+                <a href="https://snl.no/hovedkort">SNL-hovedkort</a>
+                <a href="https://snl.no/harddisk">SNL-HDD</a>
+                <a href="https://snl.no/SSD-disk">SNL-SSD</a>
+            </article>
+            <article>
+                <h1>Her er kildene til inspirasjon til nettsiden:</h1>
+                <a href="https://store.steampowered.com/">Steam</a>
+            </article>
+        </section>
+    </main>
+    <script>
+        const burgerEl = document.querySelector('.fa-bars')
+
+        const navEl = document.querySelector('.nav')
+        const burEl = document.querySelector('.bur')
+
+        burgerEl.addEventListener('click', showNav)
+        burgerEl.addEventListener('click', showBur)
+
+        function showNav(){
+        navEl.classList.toggle('show')
+        }
+        function showBur(){
+        burEl.classList.toggle('show')
+        }
+    </script>
+</body>
+</html>

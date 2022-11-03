@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lyd-bilde</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/lyd-bilde.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">Datakunnskap</a>
+            <i class="fa-solid fa-bars bur"></i>
+        </div>
+        <div class="nav">
+            <a href="./Komponenter/komponenter.html">Datakomponenter</a>
+            <a href="lyd-bilde.html" class="aktiv">Lydbilde</a>
+            <a href="tallsystem.html">Tallsystem</a>
+            <a href="kilder.html">Kilder</a>
+        </div> 
+    </div>
+    <main>
+
+        <div class="bilde">
+            <i class="fa-solid fa-arrow-right en"></i><h1>Bilde</h1>
+        </div>
+        <div class="bildetekst">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptatum adipisci vero? Aut, itaque minus autem modi in nulla magni magnam, ipsam saepe dolore possimus distinctio exercitationem placeat sit eius tenetur et adipisci. Quasi porro dicta, excepturi a quam ducimus?</p>
+
+        </div>
+
+        <div class="lyd">
+            <i class="fa-solid fa-arrow-right to"></i><h1>Lyd</h1>
+        </div>
+        <div class="lydtekst">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptatum adipisci vero? Aut, itaque minus autem modi in nulla magni magnam, ipsam saepe dolore possimus distinctio exercitationem placeat sit eius tenetur et adipisci. Quasi porro dicta, excepturi a quam ducimus?</p>
+
+        </div>
+
+    </main>
+    <script>
+        const burgerEl = document.querySelector('.fa-bars')
+
+        const navEl = document.querySelector('.nav')
+        const burEl = document.querySelector('.bur')
+
+        burgerEl.addEventListener('click', showNav)
+        burgerEl.addEventListener('click', showBur)
+
+        function showNav(){
+        navEl.classList.toggle('show')
+        }
+        function showBur(){
+        burEl.classList.toggle('show')
+        }
+
+        const bildeEl = document.querySelector('.bilde')
+        const bildetekstEl = document.querySelector('.bildetekst')
+
+        const lydEl = document.querySelector('.lyd')
+        const lydtekstEl = document.querySelector('.lydtekst')
+
+        const arrow1El = document.querySelector('.en')
+        const arrow2El = document.querySelector('.to')
+
+        bildeEl.addEventListener('click', showBil)
+        bildeEl.addEventListener('click', showArr)
+        
+        lydEl.addEventListener('click', showLyd)
+        lydEl.addEventListener('click', showRow)
+
+        function showBil(){
+        bildetekstEl.classList.toggle('show')
+        }
+        function showLyd(){
+        lydtekstEl.classList.toggle('show')
+        }
+        function showArr(){
+        arrow1El.classList.toggle('show')
+        }
+        function showRow(){
+        arrow2El.classList.toggle('show')
+        }
+    </script>
+</body>
+</html>

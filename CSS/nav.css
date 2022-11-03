@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1e3448;
+}
+main{
+    margin: 50px 15%;
+}
+
+h1, p, a{
+    font-family: 'League Gothic', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #181a21;
+}
+.logo{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    text-align: center;
+}
+.logo a{
+    padding: 20px;
+    text-align: left;
+}
+.fa-bars{
+    display: none;
+    color: white;
+    font-size: 23px;
+    margin: 20px 30px;
+    transition: transform 0.5s;
+}
+
+.fa-bars:hover{
+    cursor: pointer;
+}
+.nav.show{
+    display: flex;
+}
+.bur.show{
+    transform: rotate(270deg);
+}
+
+.navbar a:hover{
+    background-color: rgb(54, 92, 141);
+}
+.aktiv{
+    background-color: black;
+}
+
+
+h1{
+    color: rgb(184, 184, 184);
+    margin-bottom: 20px;
+}
+p{
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 850px){
+    .navbar{
+        flex-direction: column;
+    }
+    .nav{
+        flex-direction: column;
+        display: none;
+    }
+    .fa-bars{
+        display: flex;
+    }
+}

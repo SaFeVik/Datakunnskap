@@ -1,0 +1,36 @@
+main p{
+    margin-left: 10px;
+}
+
+.bilde h1, .lyd h1{
+    margin: 0;
+    display: inline;
+    margin-left: 10px;
+}
+.bilde, .lyd{
+    background-color: rgb(20, 36, 60);
+    margin-bottom: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.bilde:hover, .lyd:hover{
+    cursor: pointer;
+    background-color: rgb(17, 29, 47);
+}
+
+.bildetekst, .lydtekst{
+    display: none;
+}
+.bildetekst.show, .lydtekst.show{
+    display: flex;
+}
+.en, .to{
+    color: white;
+    transition: transform 0.2s;
+}
+.en.show, .to.show{
+    transform: rotate(90deg);
+}
+

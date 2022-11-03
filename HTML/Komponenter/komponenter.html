@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>komponenter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../CSS/nav.css">
+    <link rel="stylesheet" href="../../CSS/komponenter.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="../index.html">Datakunnskap</a>
+            <i class="fa-solid fa-bars bur"></i>
+        </div>
+        <div class="nav">
+            <a href="komponenter.html" class="aktiv">Datakomponenter</a>
+            <a href="../lyd-bilde.html">Lydbilde</a>
+            <a href="../tallsystem.html">Tallsystem</a>
+            <a href="../kilder.html">Kilder</a>
+        </div>
+    </div> 
+    <main>
+        <h1>Trykk på en av komponentene for å lese om de</h1>
+        <section>
+            <a href="grafikkort.html">
+                <h1>Grafikkort (GPU)</h1>
+                <img src="./Bilder/grafikkort.png" alt="Grafikkort">
+            </a>
+            <a href="prosessor.html">
+                <h1>Prosessor (CPU)</h1>
+                <img src="./Bilder/prosessor.png" alt="Prosessor">
+            </a>
+            <a href="arbeidsminne.html">
+                <h1>Arbeidsminne (RAM)</h1>
+                <img src="./Bilder/arbeidsminne.png" alt="Arbeidsminne">
+            </a>
+            <a href="hovedkort.html">
+                <h1>Hovedkort</h1>
+                <img src="./Bilder/hovedkort.png" alt="Hovedkort">
+            </a>
+            <a href="lagring.html">
+                <h1>Lagring</h1>
+                <img src="./Bilder/lagring.png" alt="Lagring">
+            </a>
+        </section>
+    </main>
+    <script>
+        const burgerEl = document.querySelector('.fa-bars')
+
+        const navEl = document.querySelector('.nav')
+        const burEl = document.querySelector('.bur')
+
+        burgerEl.addEventListener('click', showNav)
+        burgerEl.addEventListener('click', showBur)
+
+        function showNav(){
+        navEl.classList.toggle('show')
+        }
+        function showBur(){
+        burEl.classList.toggle('show')
+        }
+    </script>
+</body>
+</html>
