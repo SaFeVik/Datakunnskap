@@ -28,7 +28,7 @@ main p{
 }
 .en, .to{
     color: white;
-    transition: transform 0.2s;
+    transition: transform 0.2s cubic-bezier(0.17, 0.63, 1, 1.37);
 }
 .en.show, .to.show{
     transform: rotate(90deg);

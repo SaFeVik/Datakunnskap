@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lagring</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <link rel="stylesheet" href="komponent-linker.css">
 </head>
 <body>
-    <div class="komponent-link">
-        <a href="../../index.html" class="hjem">Datakunnskap</a>
-        <a href="komponenter.html" class="tilbake">Tilbake</a>
-        <a href="grafikkort.html">Grafikkort</a>
-        <a href="prosessor.html">Prosessor</a>
-        <a href="arbeidsminne.html">Arbeidsminne</a>
-        <a href="hovedkort.html">Hovedkort</a>
-        <a href="lagring.html" class="aktiv">Lagring</a>
+    <div class="komp-nav">
+        <div class="back-burger">
+            <div class="back">
+                <a href="../../index.html" class="hjem">Datakunnskap</a>
+                <a href="komponenter.html" class="tilbake"><i class="fa-solid fa-arrow-left"></i>Tilbake</a>
+            </div>
+            <div class="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="komponent-link">
+            <a href="grafikkort.html">Grafikkort</a>
+            <a href="prosessor.html">Prosessor</a>
+            <a href="arbeidsminne.html">Arbeidsminne</a>
+            <a href="hovedkort.html">Hovedkort</a>
+            <a href="lagring.html" class="aktiv">Lagring</a>
+        </div>
     </div>
     <main>
         <h1>Lagring</h1>
@@ -35,6 +43,18 @@
 
         <img src="./Bilder/ssd.jpg" class="tekstbilde" alt="Bilde av ssd">
     </main>
-    
+    <script>
+        const burgerEl = document.querySelector('.fa-bars')
+
+        const navEl = document.querySelector('.komponent-link')
+        const burEl = document.querySelector('.fa-bars')
+
+        burgerEl.addEventListener('click', showNavBur)
+
+        function showNavBur(){
+        navEl.classList.toggle('show')
+        burEl.classList.toggle('show')
+        }
+    </script>
 </body>
 </html>

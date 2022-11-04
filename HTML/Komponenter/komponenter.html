@@ -7,10 +7,6 @@
     <title>komponenter</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../../CSS/nav.css">
     <link rel="stylesheet" href="../../CSS/komponenter.css">
@@ -27,10 +23,11 @@
             <a href="../lyd-bilde.html">Lydbilde</a>
             <a href="../tallsystem.html">Tallsystem</a>
             <a href="../kilder.html">Kilder</a>
-        </div>
-    </div> 
+        </div> 
+    </div>
     <main>
-        <h1>Trykk på en av komponentene for å lese om de</h1>
+        <h1>Trykk på komponentene for å lese om dem</h1>
+        <br>
         <section>
             <a href="grafikkort.html">
                 <h1>Grafikkort (GPU)</h1>
@@ -60,13 +57,10 @@
         const navEl = document.querySelector('.nav')
         const burEl = document.querySelector('.bur')
 
-        burgerEl.addEventListener('click', showNav)
-        burgerEl.addEventListener('click', showBur)
+        burgerEl.addEventListener('click', showNavBur)
 
-        function showNav(){
+        function showNavBur(){
         navEl.classList.toggle('show')
-        }
-        function showBur(){
         burEl.classList.toggle('show')
         }
     </script>

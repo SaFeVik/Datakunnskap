@@ -6,30 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grafikkort</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <link rel="stylesheet" href="komponent-linker.css">
 </head>
 <body>
-    <div class="komponent-link">
-        <a href="../../index.html" class="hjem">Datakunnskap</a>
-        <a href="komponenter.html" class="tilbake">Tilbake</a>
-        <a href="grafikkort.html" class="aktiv">Grafikkort</a>
-        <a href="prosessor.html">Prosessor</a>
-        <a href="arbeidsminne.html">Arbeidsminne</a>
-        <a href="hovedkort.html">Hovedkort</a>
-        <a href="lagring.html">Lagring</a>
+    <div class="komp-nav">
+        <div class="back-burger">
+            <div class="back">
+                <a href="../../index.html" class="hjem">Datakunnskap</a>
+                <a href="komponenter.html" class="tilbake"><i class="fa-solid fa-arrow-left"></i>Tilbake</a>
+            </div>
+            <div class="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="komponent-link">
+            <a href="grafikkort.html" class="aktiv">Grafikkort</a>
+            <a href="prosessor.html">Prosessor</a>
+            <a href="arbeidsminne.html">Arbeidsminne</a>
+            <a href="hovedkort.html">Hovedkort</a>
+            <a href="lagring.html">Lagring</a>
+        </div>
     </div>
     <main>
+        
         <h1>Grafikkort</h1>
 
         <p>Grafikkortet, også kalt skjermkortet, er det komponentet i datamaskinen man trenger for å kunne gjengi grafikk på en dataskjerm. Grafikkortets oppgave er å kovertere grafikk representert digitalt i et arbeidsminne, til sånn det egentlig skal se ut på en skjerm. Mange datamaskiner har grafikkorter som en integrert del av hovedkortet, mens andre har separate tilleggskort. Ofte er det gaming-pcer og arbeidsstasjoner som bruker separate grafikkort for å kunne oppfylle kravene til grafisk ytelse.</p>
 
-        <img src="./Bilder/RTX4090.jpeg" class="tekstbilde" alt="Bilde av grafikkort">
+        
 
         <p>I dag benyttes også grafikkort i større datamaskiner, servere superdatamaskiner og til og med til å kunne anskaffe seg kryptovaluta. De største produsentene av grafikkort er NVIDIA og AMD. Her er en oversikt over de beste grafikkortene av disse selskapene: </p>
+        <img src="./Bilder/RTX4090.jpeg" class="tekstbilde" alt="Bilde av grafikkort">
 
         <table>
             <thead>
@@ -74,5 +84,18 @@
             </tbody>
         </table>
     </main>
+    <script>
+        const burgerEl = document.querySelector('.fa-bars')
+
+        const navEl = document.querySelector('.komponent-link')
+        const burEl = document.querySelector('.fa-bars')
+
+        burgerEl.addEventListener('click', showNavBur)
+
+        function showNavBur(){
+        navEl.classList.toggle('show')
+        burEl.classList.toggle('show')
+        }
+    </script>
 </body>
 </html>

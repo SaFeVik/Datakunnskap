@@ -1,23 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono&display=swap');
+
 body{
     padding: 0;
     margin: 0;
     background-color: #1e3448;
 }
 main{
-    margin: 50px 15%;
+    margin: 50px auto;
+    max-width: 1100px;
+    padding: 20px;
 }
+
 h1, p, a{
     font-family: 'League Gothic', sans-serif;
     font-family: 'Roboto Mono', monospace;
 }
-.komponent-link{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-}
-.komponent-link a{
-    padding: 10px;
+
+.komp-nav{
+    display: flex;
+    justify-content: space-between;
     background-color: #181a21;
+}
+.back-burger{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+.back{
+    display: flex;
+}
+.komponent-link{
+    display: flex;
+    justify-content: end;
+}
+
+.komp-nav a{
+    padding: 15px 30px;
     text-decoration: none;
     color: white;
     display: flex;
@@ -25,10 +45,6 @@ h1, p, a{
     align-items: center;
 }
 
-.komponent-link .hjem{
-    font-size: 30px;
-    color:rgb(186, 214, 255);
-}
 
 .komponent-link a:hover{
     background-color: rgb(54, 92, 141);
@@ -38,9 +54,26 @@ h1, p, a{
     border-bottom: 2px solid white;
 }
 .tilbake{
-    font-size: 20px;
-    border: 5px solid rgb(46, 65, 150);
+    font-size: 15px;
 }
+.fa-arrow-left{margin-right: 10px;}
+.fa-bars{
+    display: none;
+    color: white;
+    font-size: 20px;
+    margin: 20px 30px;
+    transition: transform 0.5s;
+}
+.fa-bars:hover{
+    cursor: pointer;
+}
+.komponent-link.show{
+    display: flex;
+}
+.fa-bars.show{
+    transform: rotate(270deg);
+}
+
 
 h1{
     color: rgb(184, 184, 184);
@@ -53,6 +86,7 @@ p{
 }
 .tekstbilde{
     width: 100%;
+    border-radius: 8px;
 }
 
 table{
@@ -73,8 +107,21 @@ td{
     background-color: #2a6395;
 }
 
-@media(max-width: 780px){
+@media(max-width: 1300px){
+    .komp-nav{
+        flex-direction: column;
+    }
     .komponent-link{
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        display: none;
+    }
+    .fa-bars{
+        display: flex;
+    }
+
+}
+@media (max-width: 450px){
+    .back{
+        flex-direction: column;
     }
 }
