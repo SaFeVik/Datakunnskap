@@ -16,7 +16,7 @@ main{
     padding: 20px;
 }
 
-h1, p, a{
+h1, h2, p, a{
     font-family: 'League Gothic', sans-serif;
     font-family: 'Roboto Mono', monospace;
 }
@@ -81,6 +81,9 @@ p{
     color: white;
     line-height: 30px;
     font-size: 18px;
+}
+h2{
+    color: #65c0f4;
 }
 
 

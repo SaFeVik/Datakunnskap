@@ -1,13 +1,10 @@
-main p{
-    margin-left: 10px;
-}
 
-.bilde h1, .lyd h1{
+.boks h1{
     margin: 0;
     display: inline;
     margin-left: 10px;
 }
-.bilde, .lyd{
+.boks{
     background-color: rgb(20, 36, 60);
     margin-bottom: 5px;
     padding: 20px;
@@ -15,22 +12,27 @@ main p{
     display: flex;
     align-items: center;
 }
-.bilde:hover, .lyd:hover{
+.boks:hover{
     cursor: pointer;
     background-color: rgb(17, 29, 47);
 }
 
-.bildetekst, .lydtekst{
+h2{
+    margin-block: 20px;
+}
+
+.tekst{
     display: none;
+    margin: 15px 15px;
 }
-.bildetekst.show, .lydtekst.show{
-    display: flex;
+.tekst.show {
+    display: block;
 }
-.en, .to{
+.fa-arrow-right{
     color: white;
     transition: transform 0.2s cubic-bezier(0.17, 0.63, 1, 1.37);
 }
-.en.show, .to.show{
+.fa-arrow-right.show{
     transform: rotate(90deg);
 }
 
