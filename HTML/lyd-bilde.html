@@ -32,22 +32,22 @@
             <i class="fa-solid fa-arrow-right en"></i><h1>Bilde</h1>
         </div>
         <div class="bildetekst tekst">
-            <p>Når vi lagrer bilder deler vi de opp i piksler. Jo flere piksler ett bilde har jo bedre blir bildekvaliteten, men på bekostning av filstørrelsen. Datamaskiner trenger informasjon om hvilken farge hver enkelt piksel har og hvordan bilde er satt opp. F. eks er bildet til høyre satt opp av 2560px på lang og 1707px i høyden. Dette skaper et skarpt bilde. Denne informasjonen om oppsettet av bildet blir brukt til å vite hvor hver enkelt piksel skal være.</p>
+            <p>Når vi lagrer bilder deler vi de opp i piksler. Jo flere piksler ett bilde har jo bedre blir bildekvaliteten, men på bekostning av filstørrelsen. Datamaskiner trenger informasjon om hvilken farge hver enkelt piksel har og hvordan bilde er satt opp. F. eks. er bildet til høyre satt opp av 2560px på langs og 1707px i høyden. Dette skaper et skarpt bilde. Denne informasjonen om oppsettet av bildet blir brukt til å vite hvor hver enkelt piksel skal være.</p>
             <br>
-            <p>I fargede bilder består hver enkelt piksel av tre tall. De tre tallene forteller noe om hvilken farge pikselen er, farger på piksler blir definert i rgb (red, green, blue). Disse verdiene kan gå fra 0 til 255 og sammen skaper de akkurat den fargen vi ønsker.</p>
+            <p>I fargede bilder består hver enkelt piksel av tre tall. De tre tallene forteller noe om hvilken farge pikselen er, farger på piksler blir definert i RGB (Red, Green, Blue). Disse verdiene kan gå fra 0 til 255 og sammen skaper de akkurat den fargen vi ønsker.</p>
         </div>
 
         <div class="bilde-kompresjon boks">
-            <i class="fa-solid fa-arrow-right to"></i><h1>Bildekompresjon</h1>
+            <i class="fa-solid fa-arrow-right to"></i><h1>Bilde kompresjon</h1>
         </div>
         <div class="bilde-kompresjontekst tekst">
             <p>Bilder kan komprimeres på to måter. Tapsfri kompresjon og destruktiv kompresjon. Vi komprimerer mediefiler på grunn av at de ofte tar stor plass.</p>
 
             <h2>Tapsfri kompresjon</h2>
-            <p>Tapsfri kompresjon komprimerer bildet uten at det går utover kvaliteten. Det vil si at bildet kan gjenskapes helt likt etter komprimeringen. Under tapsfri kompresjon omskrives piksler på rad med samme farge til mindre koder. På for eksempel et bilde med en hvit strek langs toppen der pikslene er lagret som: (255, 255, 255), (255,255, 255), (255, 255, 255) ... vil det heller stå 3 x (255, 255, 255). Det vil altså stå antallet hvite piksler på raden, oppfulgt av fargekoden for hvite piksler. Dette vil redusere koden som trengs for å produsere bildet, og samtidig, gjenskape bildet med 100% likhet.</p>
+            <p>Tapsfri kompresjon komprimerer bildet uten at det går utover kvaliteten. Det vil si at bildet kan gjenskapes helt likt etter komprimeringen. Under tapsfri kompresjon omskrives piksler på samme rad med samme farge til mindre koder. På for eksempel et bilde med en hvit strek langs toppen der pikslene er lagret som: (255, 255, 255), (255,255, 255), (255, 255, 255) ... vil det heller stå 3 x (255, 255, 255). Det vil altså stå antallet hvite piksler på raden, oppfulgt av fargekoden for hvite piksler. Dette vil redusere koden som trengs for å produsere bildet, og samtidig, gjenskape bildet med 100% likhet.</p>
                 
             <h2>Destruktiv kompresjon</h2>
-            <p>Destruktiv kompresjon brukes ofte hos bilder ettersom det ofte ikke er mange like bildepunkter etter hverandre. Et øye klarer ikke å fange opp alle pikslene på et bilde. Derfor funker det å bruke destruktiv kompresjon på bilder. Under destruktiv kompresjon blir bildet først delt inn i mindre ruter, og antallet farger blir redusert. Altså, farger som ser like ut blir satt til å være den samme. Når noen da ser på bildet fra vanlig avstand vil de ikke kunne se at bildet er komprimert.</p>
+            <p>Destruktiv kompresjon brukes ofte hos bilder ettersom det ofte ikke er mange like bildepunkter etter hverandre. Et øye klarer ikke å fange opp alle pikslene i et bilde. Derfor funker det å bruke destruktiv kompresjon på bilder. Under destruktiv kompresjon blir bildet først delt inn i mindre ruter, og antallet farger blir redusert. Altså, farger som ser like ut blir satt til å være den samme. Når noen da ser på bildet fra vanlig avstand vil de ikke kunne se at bildet er komprimert.</p>
             
         </div>
 
@@ -59,7 +59,7 @@
         </div>
         
         <div class="lyd-kompresjon boks">
-            <i class="fa-solid fa-arrow-right fire"></i><h1>Lydkompresjon</h1>
+            <i class="fa-solid fa-arrow-right fire"></i><h1>Lyd kompresjon</h1>
         </div>
         <div class="lyd-kompresjontekst tekst">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptatum adipisci vero? Aut, itaque minus autem modi in nulla magni magnam, ipsam saepe dolore possimus distinctio exercitationem placeat sit eius tenetur et adipisci. Quasi porro dicta, excepturi a quam ducimus?</p>
@@ -93,24 +93,24 @@
         const ptreEl = document.querySelector('.tre')
         const pfireEl = document.querySelector('.fire')
 
-        bildeEl.addEventListener('click', showBilAen)
-        bildekompresjonEl.addEventListener('click', showBilAto)
-        lydEl.addEventListener('click', showLydAtre)
-        lydkompresjonEl.addEventListener('click', showLydAfire)
+        bildeEl.addEventListener('click', showBilPen)
+        bildekompresjonEl.addEventListener('click', showBilPto)
+        lydEl.addEventListener('click', showLydPtre)
+        lydkompresjonEl.addEventListener('click', showLydPfire)
 
-        function showBilAen(){
+        function showBilPen(){
         bildetekstEl.classList.toggle('show')
         penEl.classList.toggle('show')
         }
-        function showBilAto(){
+        function showBilPto(){
         bildekompresjontekstEl.classList.toggle('show')
         ptoEl.classList.toggle('show')
         }
-        function showLydAtre(){
+        function showLydPtre(){
         lydtekstEl.classList.toggle('show')
         ptreEl.classList.toggle('show')
         }
-        function showLydAfire(){
+        function showLydPfire(){
         lydkompresjontekstEl.classList.toggle('show')
         pfireEl.classList.toggle('show')
         }

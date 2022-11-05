@@ -9,7 +9,7 @@ body{
 main{
     margin: 50px auto;
     max-width: 1100px;
-    padding: 20px;
+    padding: 30px;
 }
 
 h1, p, a{
@@ -20,13 +20,17 @@ h1, p, a{
 .komp-nav{
     display: flex;
     justify-content: space-between;
-    background-color: #181a21;
+    background-color: rgb(15, 23, 49);
 }
 .back-burger{
     display: flex;
     font-size: 20px;
     justify-content: space-between;
     width: 100%;
+}
+.burger{
+    display: flex;
+    align-items: center;
 }
 .back{
     display: flex;
@@ -37,7 +41,7 @@ h1, p, a{
 }
 
 .komp-nav a{
-    padding: 15px 30px;
+    padding: 20px;
     text-decoration: none;
     color: white;
     display: flex;
@@ -59,8 +63,8 @@ h1, p, a{
 .fa-arrow-left{margin-right: 10px;}
 .fa-bars{
     display: none;
-    color: white;
-    font-size: 20px;
+    color: #81d1ff;
+    font-size: 23px;
     margin: 20px 30px;
     transition: transform 0.5s;
 }
