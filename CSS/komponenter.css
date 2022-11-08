@@ -23,7 +23,6 @@ section a{
     border-radius: 10px;
     transition: scale 0.2s;
 }
-
 section a:hover{
     scale: 1.03;
 }

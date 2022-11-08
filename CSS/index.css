@@ -4,7 +4,7 @@ main{
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
 }
-
+/* Hovedbilde med tekst */
 .header{
     display: flex;
     align-items: center;

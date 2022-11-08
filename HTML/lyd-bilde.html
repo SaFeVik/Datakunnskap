@@ -16,7 +16,11 @@
     <div class="navbar">
         <div class="logo">
             <a href="../index.html">Datakunnskap</a>
-            <i class="fa-solid fa-bars bur"></i>
+            <div class="burgerx">
+                <div class="linje linje1"></div>
+                <div class="linje linje2"></div>
+                <div class="linje linje3"></div>
+            </div>
         </div>
         <div class="nav">
             <a href="./Komponenter/komponenter.html">Datakomponenter</a>
@@ -67,15 +71,19 @@
 
     </main>
     <script>
-        const burgerEl = document.querySelector('.fa-bars')
         const navEl = document.querySelector('.nav')
-        const burEl = document.querySelector('.bur')
+        const burgerxEl = document.querySelector('.burgerx')
+        const linje1El = document.querySelector('.linje1')
+        const linje2El = document.querySelector('.linje2')
+        const linje3El = document.querySelector('.linje3')
 
-        burgerEl.addEventListener('click', showNavBur)
+        burgerxEl.addEventListener('click', x)
 
-        function showNavBur(){
+        function x(){
         navEl.classList.toggle('show')
-        burEl.classList.toggle('show')
+        linje1El.classList.toggle('show')
+        linje2El.classList.toggle('show')
+        linje3El.classList.toggle('show')
         }
         
         const bildeEl = document.querySelector('.bilde')

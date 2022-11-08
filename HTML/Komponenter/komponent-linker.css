@@ -12,15 +12,26 @@ main{
     padding: 30px;
 }
 
+/* Tekst */
 h1, p, a{
     font-family: 'League Gothic', sans-serif;
     font-family: 'Roboto Mono', monospace;
 }
+h1{
+    color: rgb(184, 184, 184);
+    text-align: center;
+}
+p{
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+}
 
+/* Navigasjonsbar - komponenter */
 .komp-nav{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(15, 23, 49);
+    background-color: rgb(27, 40, 90);
 }
 .back-burger{
     display: flex;
@@ -32,6 +43,19 @@ h1, p, a{
     display: flex;
     align-items: center;
 }
+.fa-bars{
+    display: none;
+    color: #81d1ff;
+    font-size: 26px;
+    margin: 20px 30px;
+    transition: transform 0.5s;
+}
+.fa-bars:hover{
+    cursor: pointer;
+}
+.fa-bars.show{
+    transform: rotate(270deg);
+}
 .back{
     display: flex;
 }
@@ -39,7 +63,9 @@ h1, p, a{
     display: flex;
     justify-content: end;
 }
-
+.komponent-link.show{
+    display: flex;
+}
 .komp-nav a{
     padding: 20px;
     text-decoration: none;
@@ -48,12 +74,11 @@ h1, p, a{
     justify-content: center;
     align-items: center;
 }
-
-
 .komponent-link a:hover{
     background-color: rgb(54, 92, 141);
 }
 
+/* Tilbakeknapp */
 .aktiv{
     border-bottom: 2px solid white;
 }
@@ -61,38 +86,13 @@ h1, p, a{
     font-size: 15px;
 }
 .fa-arrow-left{margin-right: 10px;}
-.fa-bars{
-    display: none;
-    color: #81d1ff;
-    font-size: 23px;
-    margin: 20px 30px;
-    transition: transform 0.5s;
-}
-.fa-bars:hover{
-    cursor: pointer;
-}
-.komponent-link.show{
-    display: flex;
-}
-.fa-bars.show{
-    transform: rotate(270deg);
-}
 
-
-h1{
-    color: rgb(184, 184, 184);
-    text-align: center;
-}
-p{
-    color: white;
-    line-height: 30px;
-    font-size: 18px;
-}
 .tekstbilde{
     width: 100%;
     border-radius: 8px;
 }
 
+/* Tabell - komponenter */
 table{
     color: white;
     border: 5px solid #174064;
