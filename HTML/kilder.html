@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="../CSS/nav.css">
     <link rel="stylesheet" href="../CSS/kilder.css">
-    
+    <!-- For å få transitions til å ikke fyre av når man laster inn nettsiden -->
+    <script src="."></script>
 </head>
 <body>
     <div class="navbar">
@@ -24,7 +25,7 @@
         </div>
         <div class="nav">
             <a href="./Komponenter/komponenter.html">Datakomponenter</a>
-            <a href="lyd-bilde.html">Lydbilde</a>
+            <a href="lyd-bilde.html">Lyd og bilde</a>
             <a href="tallsystem.html">Tallsystem</a>
             <a href="kilder.html" class="aktiv">Kilder</a>
         </div> 
@@ -55,6 +56,7 @@
                 <a href="https://snl.no/hovedkort">SNL-hovedkort</a>
                 <a href="https://snl.no/harddisk">SNL-HDD</a>
                 <a href="https://snl.no/SSD-disk">SNL-SSD</a>
+                <a href="#">Kode 1 lærebok</a>
             </article>
             <article>
                 <h1>Her er kildene til inspirasjon til nettsiden:</h1>
@@ -62,21 +64,6 @@
             </article>
         </section>
     </main>
-    <script>
-        const navEl = document.querySelector('.nav')
-        const burgerxEl = document.querySelector('.burgerx')
-        const linje1El = document.querySelector('.linje1')
-        const linje2El = document.querySelector('.linje2')
-        const linje3El = document.querySelector('.linje3')
-
-        burgerxEl.addEventListener('click', x)
-
-        function x(){
-        navEl.classList.toggle('show')
-        linje1El.classList.toggle('show')
-        linje2El.classList.toggle('show')
-        linje3El.classList.toggle('show')
-        }
-    </script>
+    <script src="../nav.js"></script>
 </body>
 </html>

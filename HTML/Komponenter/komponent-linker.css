@@ -62,9 +62,13 @@ p{
 .komponent-link{
     display: flex;
     justify-content: end;
+    transition: height, font-size 0.4s;
 }
 .komponent-link.show{
-    display: flex;
+    font-size: 20px;
+}
+.komponent-link.show a{
+    padding: 20px;
 }
 .komp-nav a{
     padding: 20px;
@@ -73,6 +77,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: padding 0.4s;
 }
 .komponent-link a:hover{
     background-color: rgb(54, 92, 141);
@@ -117,7 +122,10 @@ td{
     }
     .komponent-link{
         flex-direction: column;
-        display: none;
+        font-size: 0px;
+    }
+    .komponent-link a{
+        padding: 0px;
     }
     .fa-bars{
         display: flex;

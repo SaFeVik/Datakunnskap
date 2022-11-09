@@ -10,7 +10,8 @@
     
     <link rel="stylesheet" href="../../CSS/nav.css">
     <link rel="stylesheet" href="../../CSS/komponenter.css">
-    
+    <!-- For å få transitions til å ikke fyre av når man laster inn nettsiden -->
+    <script src="."></script>
 </head>
 <body>
     <div class="navbar">
@@ -24,7 +25,7 @@
         </div>
         <div class="nav">
             <a href="komponenter.html" class="aktiv">Datakomponenter</a>
-            <a href="../lyd-bilde.html">Lydbilde</a>
+            <a href="../lyd-bilde.html">Lyd og bilde</a>
             <a href="../tallsystem.html">Tallsystem</a>
             <a href="../kilder.html">Kilder</a>
         </div> 
@@ -55,21 +56,6 @@
             </a>
         </section>
     </main>
-    <script>
-        const navEl = document.querySelector('.nav')
-        const burgerxEl = document.querySelector('.burgerx')
-        const linje1El = document.querySelector('.linje1')
-        const linje2El = document.querySelector('.linje2')
-        const linje3El = document.querySelector('.linje3')
-
-        burgerxEl.addEventListener('click', x)
-
-        function x(){
-        navEl.classList.toggle('show')
-        linje1El.classList.toggle('show')
-        linje2El.classList.toggle('show')
-        linje3El.classList.toggle('show')
-        }
-    </script>
+    <script src="../../nav.js"></script>
 </body>
 </html>

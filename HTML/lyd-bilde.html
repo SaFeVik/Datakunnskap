@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="../CSS/nav.css">
     <link rel="stylesheet" href="../CSS/lyd-bilde.css">
-
+    <!-- For å få transitions til å ikke fyre av når man laster inn nettsiden -->
+    <script src="."></script>
 </head>
 <body>
     <div class="navbar">
@@ -24,7 +25,7 @@
         </div>
         <div class="nav">
             <a href="./Komponenter/komponenter.html">Datakomponenter</a>
-            <a href="lyd-bilde.html" class="aktiv">Lydbilde</a>
+            <a href="lyd-bilde.html" class="aktiv">Lyd og bilde</a>
             <a href="tallsystem.html">Tallsystem</a>
             <a href="kilder.html">Kilder</a>
         </div> 
@@ -70,58 +71,7 @@
         </div>
 
     </main>
-    <script>
-        const navEl = document.querySelector('.nav')
-        const burgerxEl = document.querySelector('.burgerx')
-        const linje1El = document.querySelector('.linje1')
-        const linje2El = document.querySelector('.linje2')
-        const linje3El = document.querySelector('.linje3')
-
-        burgerxEl.addEventListener('click', x)
-
-        function x(){
-        navEl.classList.toggle('show')
-        linje1El.classList.toggle('show')
-        linje2El.classList.toggle('show')
-        linje3El.classList.toggle('show')
-        }
-        
-        const bildeEl = document.querySelector('.bilde')
-        const bildetekstEl = document.querySelector('.bildetekst')
-        const bildekompresjonEl = document.querySelector('.bilde-kompresjon')
-        const bildekompresjontekstEl = document.querySelector('.bilde-kompresjontekst')
-
-        const lydEl = document.querySelector('.lyd')
-        const lydtekstEl = document.querySelector('.lydtekst')
-        const lydkompresjonEl = document.querySelector('.lyd-kompresjon')
-        const lydkompresjontekstEl = document.querySelector('.lyd-kompresjontekst')
-
-        const penEl = document.querySelector('.en')
-        const ptoEl = document.querySelector('.to')
-        const ptreEl = document.querySelector('.tre')
-        const pfireEl = document.querySelector('.fire')
-
-        bildeEl.addEventListener('click', showBilPen)
-        bildekompresjonEl.addEventListener('click', showBilPto)
-        lydEl.addEventListener('click', showLydPtre)
-        lydkompresjonEl.addEventListener('click', showLydPfire)
-
-        function showBilPen(){
-        bildetekstEl.classList.toggle('show')
-        penEl.classList.toggle('show')
-        }
-        function showBilPto(){
-        bildekompresjontekstEl.classList.toggle('show')
-        ptoEl.classList.toggle('show')
-        }
-        function showLydPtre(){
-        lydtekstEl.classList.toggle('show')
-        ptreEl.classList.toggle('show')
-        }
-        function showLydPfire(){
-        lydkompresjontekstEl.classList.toggle('show')
-        pfireEl.classList.toggle('show')
-        }
-    </script>
+    <script src="../nav.js"></script>
+    <script src="../lyd-bilde.js"></script>
 </body>
 </html>
