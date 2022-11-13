@@ -104,6 +104,8 @@ table{
     border-collapse: collapse;
     text-align: center;
     width: 100%;
+    font-family: 'League Gothic', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 td, th{
     border: 3px solid #174064;

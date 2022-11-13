@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tegnsett</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/tallsystem.css">
+    <!-- For å få transitions til å ikke fyre av når man laster inn nettsiden -->
+    <script src="."></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="../index.html">Datakunnskap</a>
+            <div class="burgerx">
+                <div class="linje linje1"></div>
+                <div class="linje linje2"></div>
+                <div class="linje linje3"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="./Komponenter/komponenter.html">Datakomponenter</a>
+            <a href="lyd-bilde.html">Lyd og bilde</a>
+            <a href="tegnsett.html" class="aktiv">Tegnsett</a>
+            <a href="kilder.html">Kilder</a>
+        </div>
+    </div>
+    <main>
+        <h1>Tegnsettet</h1>
+        <p>Hvert enkelt tegn som vises på skjermen i datamaskinen har et tilhørende tall. For at datamaskinen skal forstå tallene som hører til, og gjengi tegnene på skjermen, må de bli gjort om til binære tall.</p>
+        <br>
+        <h2>UTF-8</h2>
+        <p>Hvert siffer i det binæret tallet tar opp 1 bit i lagrinsplass. I UTF-8 får hvert tegn et binært tall av 8 bit som tilsvarer 1 byte. Det som gjør UTF-8 spesielt er at hvert tegn kan ha opp til 4 byte, og dermed kan det være opp til 1 million ulike tegn i systemet. Dette geniale tegnsettet gjør sånn at man kan vise alle ulike tegn fra alle ulike språk, og er en veldig bra oppgradering fra det tidligere tegnsettet ANSI.</p>
+        <br>
+        <img src="../Bilder/tegntabell.png" alt="Bilde av normale tall til binære tall til heksadesimale tall til tegn">
+        <br>
+        <br>
+        <h2>Heksadesimale tall</h2>
+        <p>Heksadesimale tall funker som et godt mellomledd mellom normale tall og binære tall. De er lettere å oversette til binære tall for PCen, og lettere å oversette til normale tall for oss mennesker. Ovenfor ser vi noen eksempler på heksadesimale tall.</p>
+        <br>
+        <p>Disse tallene er i 16-tallssystemet. Det betyr at hvis man for eksempel skal gjøre om 320, blir det 1*16^3 + 4*16^1 + 0*16^0 som da er 140 i heksadesimale tall. I tillegg blir tall over 9 representert i bokstaver. Så A=10, B=11 og C=12.</p>
+    </main>
+    <script src="../nav.js"></script>
+</body>
+</html>

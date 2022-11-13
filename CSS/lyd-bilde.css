@@ -42,3 +42,14 @@ main > h1{
     transform: rotate(90deg);
 }
 
+.bildetekst > img{
+    width: 49%;
+    object-fit: cover;
+    height: 25vw;
+}
+.lydtekst > img{
+    width: 100%;
+    margin-block: 20px;
+    border: 5px solid black ;
+    border-radius: 10px;
+}

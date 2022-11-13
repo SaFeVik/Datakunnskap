@@ -26,7 +26,7 @@
         <div class="nav">
             <a href="./Komponenter/komponenter.html">Datakomponenter</a>
             <a href="lyd-bilde.html" class="aktiv">Lyd og bilde</a>
-            <a href="tallsystem.html">Tallsystem</a>
+            <a href="tegnsett.html">Tegnsett</a>
             <a href="kilder.html">Kilder</a>
         </div> 
     </div>
@@ -37,9 +37,15 @@
             <i class="fa-solid fa-arrow-right en"></i><h1>Bilde</h1>
         </div>
         <div class="bildetekst tekst">
-            <p>Når vi lagrer bilder deler vi de opp i piksler. Jo flere piksler ett bilde har jo bedre blir bildekvaliteten, men på bekostning av filstørrelsen. Datamaskiner trenger informasjon om hvilken farge hver enkelt piksel har og hvordan bilde er satt opp. F. eks. er bildet til høyre satt opp av 2560px på langs og 1707px i høyden. Dette skaper et skarpt bilde. Denne informasjonen om oppsettet av bildet blir brukt til å vite hvor hver enkelt piksel skal være.</p>
-            <br>
+            <p>Når vi lagrer bilder, deler vi de opp i piksler. Jo flere piksler ett bilde har jo bedre blir bildekvaliteten, men på bekostning av filstørrelsen. Datamaskiner trenger informasjon om hvilken farge hver enkelt piksel har og hvordan bilde er satt opp. F. eks. er bildet under til venstre satt opp av 2560px på langs og 1707px i høyden. Dette skaper et skarpt bilde, mens bildet til høyre har blitt offer for ekstrem destruktiv kompresjon. Bilder trenger også litt ekstra informasjon, denne informasjonen forteller datamaskinen hvor hver enkelt piksel skal være. De to bildene tar opp veldig forskjellig lagringsplass. Bildet til venstre tar opp 550KB, mens bildet til høyre tar kun opp 22KB.</p>
+            
+            <h2>Farger på bilder</h2>
             <p>I fargede bilder består hver enkelt piksel av tre tall. De tre tallene forteller noe om hvilken farge pikselen er, farger på piksler blir definert i RGB (Red, Green, Blue). Disse verdiene kan gå fra 0 til 255 og sammen skaper de akkurat den fargen vi ønsker.</p>
+            <br>
+            
+            <img src="../Bilder/gaupe.jpeg" alt="Et ukomprimert bilde av en gaupe">
+            <img src="../Bilder/gaupe-komp.png" alt="Et komprisert bilde av en gaupe">
+            
         </div>
 
         <div class="bilde-kompresjon boks">
@@ -60,14 +66,31 @@
             <i class="fa-solid fa-arrow-right tre"></i><h1>Lyd</h1>
         </div>
         <div class="lydtekst tekst">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptatum adipisci vero? Aut, itaque minus autem modi in nulla magni magnam, ipsam saepe dolore possimus distinctio exercitationem placeat sit eius tenetur et adipisci. Quasi porro dicta, excepturi a quam ducimus?</p>
+            <p>
+                Opptak av lyd skjer i dag gjennom mikrofoner som omgjør lydbølger til elektriske signaler. Dette skjer ved hjelp av en membran som setter en spole i bevegelse mot en magnet. Høyt lydvolum vil få membranen og spolen til å svinge dypere. Dette lager en høy elektrisk spenning i spolen. Dette gjør at det elektriske signalet samsvarer med lyden. Dette er et analogt opptak av lyd. Hvis vi har lyst til å digitalisere lydopptaket er vi nødt til å gjøre det om til tall.
+            </p>
+            <h2>Digitalisering av lyd</h2>
+            <p>
+                Et analogt lydopptak består av endringer i spenning over tid. Vi kan framstille disse spenningene grafisk ved at x-aksen er tiden og y-asken er nivået på spenningen. Når vi digitaliserer måler vi spenningen med jevne mellomrom. Jo oftere spenningen blir målt jo bedre blir lydbildet. I bilde nedenfor kan du se en måling av analog lyd, men hvis vi hadde spilt denne filen nå ville lyden vært hakkete og lydkvaliteten ville vært svært dårlig. Det er fordi grafen er altfor upresis.
+            </p>
+            <img src="../Bilder/lydpådata.png" alt="Digitalisert lyd">
+            <p>
+                Hvor ofte vi gjør målingene, kalles samplingsfrekvens, og nøyaktigheten på hver måling oppgir vi i antall bit. Hvis mikrofonen som blir brukt til å ta opp lyden er god, vil vi få en meget detaljert, glatt kurve, og god lyd.
+            </p>
         </div>
         
         <div class="lyd-kompresjon boks">
             <i class="fa-solid fa-arrow-right fire"></i><h1>Lyd kompresjon</h1>
         </div>
         <div class="lyd-kompresjontekst tekst">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni voluptatum adipisci vero? Aut, itaque minus autem modi in nulla magni magnam, ipsam saepe dolore possimus distinctio exercitationem placeat sit eius tenetur et adipisci. Quasi porro dicta, excepturi a quam ducimus?</p>
+            <p>Lyd tar ofte mye plass på en datamaskin. Det kan derfor være lurt å komprimere lydfiler når vi skal lagre de eller når vi skal dele de til andre enheter. Under komprimeringen av lyd er målet å redusere antallet tall som må lagres. </p>
+
+            <h2>Pulskode (PCM) og ADPCM</h2>
+            
+            <p>
+            Pulskode går ut på å lagre analoge lydsignal med jevne mellomrom. 5 målinger av en PCM lyd kan for eksempel se slik ut: 24590, 23044, 23445, 29083, 21344. Hvis vi hadde lagret disse tallene ville det tatt mye lagringsplass på datamaskinen. Det vil derfor vær lurt å komprimere lyden ned til mindre tall. Dette kan gjøres ved å måle forskjellene mellom tallene. Vi starter på 24590 deretter er det 1546 ned til 23044. målingene ville da sett slik ut: 24590, 
+            -1546, +401, +5638, -7739. Denne type komprimering kalles ADPCM og den er tapsfri. 
+            </p>
         </div>
 
     </main>

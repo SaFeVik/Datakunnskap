@@ -9,6 +9,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Bildet er hentet fra Vecteezy */
     background-image: url('../Bilder/bakgrunn.jpeg');
     background-position: center;
     background-size: cover;

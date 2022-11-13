@@ -48,14 +48,13 @@ h1, h2, p, a{
 .nav{
     display: flex;
     justify-content: space-around;
-    transition: height, font-size 0.4s;
 }
 .navbar a{
     color: white;
     text-decoration: none;
     padding: 20px 30px;
     text-align: center;
-    transition: padding 0.4s;
+    transition: padding 0.4s, font-size 0.4s;
 }
 .navbar a:hover{
     background-color: rgb(54, 92, 141);
